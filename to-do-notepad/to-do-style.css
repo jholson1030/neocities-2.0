@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'Dahlia';
+    src: url(./Dahlia-BF650061b1d9c43.otf);
+}
+
+body {
+    height: calc(100vh - 16px);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #333333;
+    color: whitesmoke;
+    font-family: 'Dahlia', sans-serif;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+#note-container {
+    height: 70%;
+    width: 70%;
+    border: solid 10px firebrick;
+    border-image: linear-gradient( to top right, firebrick, #333333 );
+    border-image-slice: 1;
+    border-radius: 10px;
+}
+
+.task-wrapper {
+    width: 95%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 5px 20px;
+    border: solid 2px whitesmoke;
+    padding: 5px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.option-wrapper {
+    width: 100px;
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}
+
+.task {
+    width: 1fr;
+    padding: 5px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    overflow-wrap: break-word;
+    padding-right: 100px;
+}
+
+.delete, .edit {
+    width: 50px;
+    height: 25px;
+    border: solid 1px #333333;
+    margin: 3px;
+}
+
+#note-input {
+  height: 100px;
+  width: 400px;
+  resize: none;
+  vertical-align: top;
+}
+
+#note-submit {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    background-color: #e7eef1;
+    border: solid 10px transparent;
+    border-image: linear-gradient( to top right, firebrick, #333333 );
+    border-image-slice: 1;
+    color: firebrick;
+    transition: all 0.3s ease-in-out;
+  }
+  
+    #note-submit:hover {
+    background-image: linear-gradient( to top right, firebrick, #333333);
+    color: white;
+  }
+
+#input-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: calc(100%-100px);
+    gap: 10px;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    margin: 0;
+    background-color: whitesmoke;
+    color: #333333;
+    padding-bottom: 15px;
+    z-index: 1000;
+}
+
+.github-link {
+    color: #333333;
+    font-size: 30px;
+    margin-left: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.github-link:hover {
+    color: firebrick;
+    transform: scale(1.2s);
+}
